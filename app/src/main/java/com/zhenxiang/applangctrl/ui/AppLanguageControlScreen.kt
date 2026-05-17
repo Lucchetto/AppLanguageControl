@@ -3,10 +3,11 @@ package com.zhenxiang.applangctrl.ui
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.provider.Settings
-import android.widget.ImageView
 import android.widget.Toast
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -35,12 +36,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import com.zhenxiang.applangctrl.R
 import com.zhenxiang.applangctrl.data.InstalledApp
 
@@ -172,22 +174,11 @@ private fun AppListItem(
             .padding(horizontal = 20.dp, vertical = 12.dp),
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        AndroidView(
-            modifier = Modifier.size(48.dp)
-                .align(Alignment.CenterVertically),
-            factory = { context ->
-                ImageView(context).apply {
-                    scaleType = ImageView.ScaleType.FIT_CENTER
-                    adjustViewBounds = false
-                    importantForAccessibility = ImageView.IMPORTANT_FOR_ACCESSIBILITY_NO
-                }
-            },
-            update = { imageView ->
-                imageView.setImageDrawable(app.icon)
-            },
-            onReset = { imageView ->
-                imageView.setImageDrawable(null)
-            }
+        DrawableIcon(
+            drawable = app.icon,
+            modifier = Modifier
+                .size(48.dp)
+                .align(Alignment.CenterVertically)
         )
 
         Column(modifier = Modifier.weight(1f)) {
@@ -221,6 +212,19 @@ private fun AppListItem(
                     color = MaterialTheme.colorScheme.error
                 )
             }
+        }
+    }
+}
+
+@Composable
+private fun DrawableIcon(
+    drawable: Drawable,
+    modifier: Modifier = Modifier
+) {
+    Canvas(modifier = modifier) {
+        drawIntoCanvas { canvas ->
+            drawable.setBounds(0, 0, size.width.toInt(), size.height.toInt())
+            drawable.draw(canvas.nativeCanvas)
         }
     }
 }
