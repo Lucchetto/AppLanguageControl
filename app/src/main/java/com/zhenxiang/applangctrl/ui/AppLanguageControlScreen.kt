@@ -26,6 +26,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,6 +45,7 @@ fun AppLanguageControlScreen(viewModel: AppListViewModel) {
 
     AppLanguageControlContent(
         uiState = viewModel.uiState,
+        onSearchQueryChange = viewModel::updateSearchQuery,
         onSupportedAppClick = { packageName ->
             openPerAppLanguageSettings(
                 context = context,
@@ -56,6 +58,7 @@ fun AppLanguageControlScreen(viewModel: AppListViewModel) {
 @Composable
 private fun AppLanguageControlContent(
     uiState: AppListUiState,
+    onSearchQueryChange: (String) -> Unit,
     onSupportedAppClick: (String) -> Unit
 ) {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -77,11 +80,28 @@ private fun AppLanguageControlContent(
                 Text(
                     text = if (uiState.isLoading) {
                         "Loading apps"
+                    } else if (uiState.searchQuery.isNotBlank()) {
+                        "${uiState.apps.size} of ${uiState.totalAppCount} apps found"
                     } else {
                         "${uiState.apps.size} apps found"
                     },
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                OutlinedTextField(
+                    value = uiState.searchQuery,
+                    onValueChange = onSearchQueryChange,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 12.dp),
+                    enabled = !uiState.isLoading,
+                    singleLine = true,
+                    label = {
+                        Text(text = "Search")
+                    },
+                    placeholder = {
+                        Text(text = "App or package name")
+                    }
                 )
             }
 
