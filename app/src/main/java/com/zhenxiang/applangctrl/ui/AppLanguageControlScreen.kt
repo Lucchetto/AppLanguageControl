@@ -5,8 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
+import android.widget.ImageView
 import android.widget.Toast
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,11 +31,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
 import com.zhenxiang.applangctrl.data.InstalledApp
 
 @Composable
@@ -131,10 +131,22 @@ private fun AppListItem(
             .padding(horizontal = 20.dp, vertical = 12.dp),
         horizontalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Image(
-            bitmap = app.icon.asImageBitmap(),
-            contentDescription = null,
+        AndroidView(
             modifier = Modifier.size(48.dp)
+                .align(Alignment.CenterVertically),
+            factory = { context ->
+                ImageView(context).apply {
+                    scaleType = ImageView.ScaleType.FIT_CENTER
+                    adjustViewBounds = false
+                    importantForAccessibility = ImageView.IMPORTANT_FOR_ACCESSIBILITY_NO
+                }
+            },
+            update = { imageView ->
+                imageView.setImageDrawable(app.icon)
+            },
+            onReset = { imageView ->
+                imageView.setImageDrawable(null)
+            }
         )
 
         Column(modifier = Modifier.weight(1f)) {

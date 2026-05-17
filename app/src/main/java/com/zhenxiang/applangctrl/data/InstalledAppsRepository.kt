@@ -4,10 +4,6 @@ import android.app.LocaleConfig
 import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 
 class InstalledAppsRepository(
     private val context: Context
@@ -15,8 +11,6 @@ class InstalledAppsRepository(
     private val packageManager = context.packageManager
 
     fun loadInstalledApps(): List<InstalledApp> {
-        val iconSize = (48 * context.resources.displayMetrics.density).toInt().coerceAtLeast(48)
-
         return packageManager
             .getInstalledPackages(PackageManager.PackageInfoFlags.of(0))
             .mapNotNull { packageInfo ->
@@ -26,7 +20,7 @@ class InstalledAppsRepository(
                     packageName = packageInfo.packageName,
                     versionName = packageInfo.versionName ?: "unknown",
                     versionCode = packageInfo.longVersionCode,
-                    icon = applicationInfo.loadIcon(packageManager).toBitmap(iconSize),
+                    icon = applicationInfo.loadIcon(packageManager),
                     supportsPerAppLanguage = supportsPerAppLanguage(packageInfo)
                 )
             }
@@ -46,19 +40,5 @@ class InstalledAppsRepository(
         } catch (_: RuntimeException) {
             false
         }
-    }
-}
-
-private fun Drawable.toBitmap(sizePx: Int): Bitmap {
-    if (this is BitmapDrawable && bitmap != null) {
-        return bitmap
-    }
-
-    val width = if (intrinsicWidth > 0) intrinsicWidth else sizePx
-    val height = if (intrinsicHeight > 0) intrinsicHeight else sizePx
-    return Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888).also { bitmap ->
-        val canvas = Canvas(bitmap)
-        setBounds(0, 0, canvas.width, canvas.height)
-        draw(canvas)
     }
 }
