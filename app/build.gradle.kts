@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.zhenxiang.applangctrl"
+    namespace = "com.zhenxiang.langctrl"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.zhenxiang.applangctrl"
+        applicationId = "com.zhenxiang.langctrl"
         minSdk = 33
         targetSdk = 36
         versionCode = 1

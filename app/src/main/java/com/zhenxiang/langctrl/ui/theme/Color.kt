@@ -1,4 +1,4 @@
-package com.zhenxiang.applangctrl.ui.theme
+package com.zhenxiang.langctrl.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

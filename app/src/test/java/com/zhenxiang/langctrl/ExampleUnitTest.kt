@@ -1,4 +1,4 @@
-package com.zhenxiang.applangctrl
+package com.zhenxiang.langctrl
 
 import org.junit.Test
 

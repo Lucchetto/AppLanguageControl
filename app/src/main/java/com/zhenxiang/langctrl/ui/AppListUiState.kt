@@ -1,6 +1,6 @@
-package com.zhenxiang.applangctrl.ui
+package com.zhenxiang.langctrl.ui
 
-import com.zhenxiang.applangctrl.data.InstalledApp
+import com.zhenxiang.langctrl.data.InstalledApp
 
 data class AppListUiState(
     val isLoading: Boolean = true,

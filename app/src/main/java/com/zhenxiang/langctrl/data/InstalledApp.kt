@@ -1,4 +1,4 @@
-package com.zhenxiang.applangctrl.data
+package com.zhenxiang.langctrl.data
 
 import android.graphics.drawable.Drawable
 

@@ -1,4 +1,4 @@
-package com.zhenxiang.applangctrl.ui
+package com.zhenxiang.langctrl.ui
 
 import android.app.Application
 import androidx.compose.runtime.getValue
@@ -6,8 +6,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.zhenxiang.applangctrl.data.InstalledApp
-import com.zhenxiang.applangctrl.data.InstalledAppsRepository
+import com.zhenxiang.langctrl.data.InstalledApp
+import com.zhenxiang.langctrl.data.InstalledAppsRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

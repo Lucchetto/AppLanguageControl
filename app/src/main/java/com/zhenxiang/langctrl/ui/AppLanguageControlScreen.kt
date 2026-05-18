@@ -1,4 +1,4 @@
-package com.zhenxiang.applangctrl.ui
+package com.zhenxiang.langctrl.ui
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -49,8 +49,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.zhenxiang.applangctrl.R
-import com.zhenxiang.applangctrl.data.InstalledApp
+import com.zhenxiang.langctrl.R
+import com.zhenxiang.langctrl.data.InstalledApp
 
 @Composable
 fun AppLanguageControlScreen(viewModel: AppListViewModel) {
