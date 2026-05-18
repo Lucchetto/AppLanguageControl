@@ -27,6 +27,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -53,6 +54,7 @@ fun AppLanguageControlScreen(viewModel: AppListViewModel) {
     AppLanguageControlContent(
         uiState = viewModel.uiState,
         onSearchQueryChange = viewModel::updateSearchQuery,
+        onAppFilterChange = viewModel::updateAppFilter,
         onSupportedAppClick = { packageName ->
             openPerAppLanguageSettings(
                 context = context,
@@ -66,6 +68,7 @@ fun AppLanguageControlScreen(viewModel: AppListViewModel) {
 private fun AppLanguageControlContent(
     uiState: AppListUiState,
     onSearchQueryChange: (String) -> Unit,
+    onAppFilterChange: (AppFilter) -> Unit,
     onSupportedAppClick: (String) -> Unit
 ) {
     Scaffold(
@@ -90,7 +93,7 @@ private fun AppLanguageControlContent(
                 Text(
                     text = if (uiState.isLoading) {
                         "Loading apps"
-                    } else if (uiState.searchQuery.isNotBlank()) {
+                    } else if (uiState.searchQuery.isNotBlank() || uiState.appFilter != AppFilter.ALL) {
                         "${uiState.apps.size} of ${uiState.totalAppCount} apps found"
                     } else {
                         "${uiState.apps.size} apps found"
@@ -126,6 +129,29 @@ private fun AppLanguageControlContent(
                         }
                     }
                 )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    FilterChip(
+                        selected = uiState.appFilter == AppFilter.ALL,
+                        onClick = { onAppFilterChange(AppFilter.ALL) },
+                        enabled = !uiState.isLoading,
+                        label = {
+                            Text(text = "All")
+                        }
+                    )
+                    FilterChip(
+                        selected = uiState.appFilter == AppFilter.SUPPORTS_PER_APP_LANGUAGE,
+                        onClick = { onAppFilterChange(AppFilter.SUPPORTS_PER_APP_LANGUAGE) },
+                        enabled = !uiState.isLoading,
+                        label = {
+                            Text(text = "Per app language")
+                        }
+                    )
+                }
             }
 
             Divider()
