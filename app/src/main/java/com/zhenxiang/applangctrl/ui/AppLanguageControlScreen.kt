@@ -8,6 +8,7 @@ import android.net.Uri
 import android.provider.Settings
 import android.widget.Toast
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -15,19 +16,23 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsBottomHeight
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -73,112 +78,115 @@ private fun AppLanguageControlContent(
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
-        contentWindowInsets = WindowInsets.safeDrawing
-    ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 20.dp, vertical = 16.dp)
-            ) {
-                Text(
-                    text = "Installed apps",
-                    style = MaterialTheme.typography.headlineSmall,
-                    fontWeight = FontWeight.SemiBold
-                )
-                Text(
-                    text = if (uiState.isLoading) {
-                        "Loading apps"
-                    } else if (uiState.searchQuery.isNotBlank() || uiState.appFilter != AppFilter.ALL) {
-                        "${uiState.apps.size} of ${uiState.totalAppCount} apps found"
-                    } else {
-                        "${uiState.apps.size} apps found"
-                    },
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                OutlinedTextField(
-                    value = uiState.searchQuery,
-                    onValueChange = onSearchQueryChange,
+        topBar = {
+            Column {
+                Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 12.dp),
-                    enabled = !uiState.isLoading,
-                    singleLine = true,
-                    label = {
-                        Text(text = "Search")
-                    },
-                    placeholder = {
-                        Text(text = "App or package name")
-                    },
-                    trailingIcon = {
-                        if (uiState.searchQuery.isNotEmpty()) {
-                            IconButton(
-                                onClick = { onSearchQueryChange("") },
-                                enabled = !uiState.isLoading
-                            ) {
-                                Icon(
-                                    painter = painterResource(id = R.drawable.ic_close_24),
-                                    contentDescription = "Clear search"
-                                )
+                        .background(MaterialTheme.colorScheme.background)
+                        .padding(horizontal = 20.dp, vertical = 16.dp)
+                        .windowInsetsPadding(
+                            WindowInsets.safeDrawing.only(
+                                WindowInsetsSides.Top + WindowInsetsSides.Horizontal
+                            )
+                        )
+                ) {
+                    Text(
+                        text = "Installed apps",
+                        style = MaterialTheme.typography.headlineSmall,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Text(
+                        text = if (uiState.isLoading) {
+                            "Loading apps"
+                        } else if (uiState.searchQuery.isNotBlank() || uiState.appFilter != AppFilter.ALL) {
+                            "${uiState.apps.size} of ${uiState.totalAppCount} apps found"
+                        } else {
+                            "${uiState.apps.size} apps found"
+                        },
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    OutlinedTextField(
+                        value = uiState.searchQuery,
+                        onValueChange = onSearchQueryChange,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 12.dp),
+                        enabled = !uiState.isLoading,
+                        singleLine = true,
+                        label = {
+                            Text(text = "Search")
+                        },
+                        placeholder = {
+                            Text(text = "App or package name")
+                        },
+                        trailingIcon = {
+                            if (uiState.searchQuery.isNotEmpty()) {
+                                IconButton(
+                                    onClick = { onSearchQueryChange("") },
+                                    enabled = !uiState.isLoading
+                                ) {
+                                    Icon(
+                                        painter = painterResource(id = R.drawable.ic_close_24),
+                                        contentDescription = "Clear search"
+                                    )
+                                }
                             }
                         }
-                    }
-                )
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 8.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    FilterChip(
-                        selected = uiState.appFilter == AppFilter.ALL,
-                        onClick = { onAppFilterChange(AppFilter.ALL) },
-                        enabled = !uiState.isLoading,
-                        label = {
-                            Text(text = "All")
-                        }
                     )
-                    FilterChip(
-                        selected = uiState.appFilter == AppFilter.SUPPORTS_PER_APP_LANGUAGE,
-                        onClick = { onAppFilterChange(AppFilter.SUPPORTS_PER_APP_LANGUAGE) },
-                        enabled = !uiState.isLoading,
-                        label = {
-                            Text(text = "Per app language")
-                        }
-                    )
-                }
-            }
-
-            Divider()
-
-            if (uiState.isLoading) {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    CircularProgressIndicator()
-                }
-            } else {
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(
-                        items = uiState.apps,
-                        key = { it.packageName }
-                    ) { app ->
-                        AppListItem(
-                            app = app,
-                            onClick = { onSupportedAppClick(app.packageName) }
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        FilterChip(
+                            selected = uiState.appFilter == AppFilter.ALL,
+                            onClick = { onAppFilterChange(AppFilter.ALL) },
+                            enabled = !uiState.isLoading,
+                            label = {
+                                Text(text = "All")
+                            }
                         )
-                        Divider(modifier = Modifier.padding(start = 84.dp))
+                        FilterChip(
+                            selected = uiState.appFilter == AppFilter.SUPPORTS_PER_APP_LANGUAGE,
+                            onClick = { onAppFilterChange(AppFilter.SUPPORTS_PER_APP_LANGUAGE) },
+                            enabled = !uiState.isLoading,
+                            label = {
+                                Text(text = "Per app language")
+                            }
+                        )
                     }
+                }
 
-                    item {
-                        Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
-                    }
+                HorizontalDivider()
+            }
+        },
+        contentWindowInsets = WindowInsets.safeDrawing,
+    ) { innerPadding ->
+        if (uiState.isLoading) {
+            Box(
+                modifier = Modifier.fillMaxSize().padding(innerPadding),
+                contentAlignment = Alignment.Center
+            ) {
+                CircularProgressIndicator()
+            }
+        } else {
+            LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = innerPadding) {
+                items(
+                    items = uiState.apps,
+                    key = { it.packageName }
+                ) { app ->
+                    AppListItem(
+                        app = app,
+                        onClick = { onSupportedAppClick(app.packageName) }
+                    )
+                    Divider(modifier = Modifier.padding(start = 84.dp))
+                }
+
+                item {
+                    Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
                 }
             }
         }
