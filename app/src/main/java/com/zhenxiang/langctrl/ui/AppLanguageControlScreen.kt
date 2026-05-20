@@ -44,10 +44,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
-import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -91,20 +91,24 @@ private fun AppLanguageControlContent(
                             WindowInsets.safeDrawing.only(
                                 WindowInsetsSides.Top + WindowInsetsSides.Horizontal
                             )
-                        )
+                    )
                 ) {
                     Text(
-                        text = "Installed apps",
+                        text = stringResource(id = R.string.installed_apps),
                         style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
                         text = if (uiState.isLoading) {
-                            "Loading apps"
+                            stringResource(id = R.string.loading_apps)
                         } else if (uiState.searchQuery.isNotBlank() || uiState.appFilter != AppFilter.ALL) {
-                            "${uiState.apps.size} of ${uiState.totalAppCount} apps found"
+                            stringResource(
+                                id = R.string.filtered_apps_found,
+                                uiState.apps.size,
+                                uiState.totalAppCount
+                            )
                         } else {
-                            "${uiState.apps.size} apps found"
+                            stringResource(id = R.string.apps_found, uiState.apps.size)
                         },
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -118,10 +122,10 @@ private fun AppLanguageControlContent(
                         enabled = !uiState.isLoading,
                         singleLine = true,
                         label = {
-                            Text(text = "Search")
+                            Text(text = stringResource(id = R.string.search))
                         },
                         placeholder = {
-                            Text(text = "App or package name")
+                            Text(text = stringResource(id = R.string.search_placeholder))
                         },
                         trailingIcon = {
                             if (uiState.searchQuery.isNotEmpty()) {
@@ -131,7 +135,7 @@ private fun AppLanguageControlContent(
                                 ) {
                                     Icon(
                                         painter = painterResource(id = R.drawable.ic_close_24),
-                                        contentDescription = "Clear search"
+                                        contentDescription = stringResource(id = R.string.clear_search)
                                     )
                                 }
                             }
@@ -148,7 +152,7 @@ private fun AppLanguageControlContent(
                             onClick = { onAppFilterChange(AppFilter.ALL) },
                             enabled = !uiState.isLoading,
                             label = {
-                                Text(text = "All")
+                                Text(text = stringResource(id = R.string.filter_all_apps))
                             }
                         )
                         FilterChip(
@@ -156,7 +160,7 @@ private fun AppLanguageControlContent(
                             onClick = { onAppFilterChange(AppFilter.SUPPORTS_PER_APP_LANGUAGE) },
                             enabled = !uiState.isLoading,
                             label = {
-                                Text(text = "Per app language")
+                                Text(text = stringResource(id = R.string.filter_per_app_language))
                             }
                         )
                     }
@@ -238,7 +242,7 @@ private fun AppListItem(
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = "Version ${app.versionName} (${app.versionCode})",
+                text = stringResource(id = R.string.app_version, app.versionName, app.versionCode),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
@@ -247,7 +251,7 @@ private fun AppListItem(
             if (!app.supportsPerAppLanguage) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "(per app language not supported)",
+                    text = stringResource(id = R.string.per_app_language_not_supported),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.error
                 )
@@ -278,7 +282,7 @@ private fun openPerAppLanguageSettings(context: Context, packageName: String) {
     } catch (_: ActivityNotFoundException) {
         Toast.makeText(
             context,
-            "Per app language settings are not available on this device",
+            context.getString(R.string.per_app_language_settings_unavailable),
             Toast.LENGTH_SHORT
         ).show()
     }

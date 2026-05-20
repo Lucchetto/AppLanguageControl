@@ -4,6 +4,7 @@ import android.app.LocaleConfig
 import android.content.Context
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
+import com.zhenxiang.langctrl.R
 
 class InstalledAppsRepository(
     private val context: Context
@@ -18,7 +19,7 @@ class InstalledAppsRepository(
                 InstalledApp(
                     appName = applicationInfo.loadLabel(packageManager).toString(),
                     packageName = packageInfo.packageName,
-                    versionName = packageInfo.versionName ?: "unknown",
+                    versionName = packageInfo.versionName ?: context.getString(R.string.unknown_version),
                     versionCode = packageInfo.longVersionCode,
                     icon = applicationInfo.loadIcon(packageManager),
                     supportsPerAppLanguage = supportsPerAppLanguage(packageInfo)
