@@ -44,6 +44,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -79,7 +81,7 @@ private fun AppLanguageControlContent(
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            Column {
+            Column(modifier = Modifier.consumePointerInput()) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -191,6 +193,10 @@ private fun AppLanguageControlContent(
             }
         }
     }
+}
+
+private fun Modifier.consumePointerInput(): Modifier {
+    return pointerInput(Unit) {}
 }
 
 @Composable
