@@ -1,0 +1,61 @@
+name: Merge release branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_branch:
+        description: 'Release branch to merge, for example release/1.0.0'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    name: Merge release into master and develop
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge release branch
+        env:
+          RELEASE_BRANCH: ${{ github.event.inputs.release_branch }}
+        run: |
+          set -euo pipefail
+
+          RELEASE_BRANCH="${RELEASE_BRANCH#refs/heads/}"
+          if [[ ! "$RELEASE_BRANCH" =~ ^release/[A-Za-z0-9._/-]+$ ]]; then
+            echo "Release branch must match release/<name> and contain only letters, numbers, dots, underscores, dashes, and slashes." >&2
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin --prune
+          git rev-parse --verify "origin/$RELEASE_BRANCH"
+
+          verify_merge() {
+            local target_branch="$1"
+            git checkout -B "verify-$target_branch" "origin/$target_branch"
+            git merge --no-commit --no-ff "origin/$RELEASE_BRANCH"
+            if [ -f .git/MERGE_HEAD ]; then
+              git merge --abort
+            fi
+          }
+
+          verify_merge master
+          verify_merge develop
+
+          git checkout -B master origin/master
+          git merge --no-ff --no-edit "origin/$RELEASE_BRANCH"
+          git push origin master
+
+          git checkout -B develop origin/develop
+          git merge --no-ff --no-edit "origin/$RELEASE_BRANCH"
+          git push origin develop
