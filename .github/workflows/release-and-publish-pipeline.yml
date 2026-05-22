@@ -7,10 +7,10 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
-  build:
-
+  build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,11 +25,20 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 17
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
       - name: Run unit tests
         run: ./gradlew test
+
+      - name: Build release AAB
+        run: >
+          ./gradlew bundleRelease
+          -Pandroid.injected.signing.store.file='${{ github.workspace }}/signing-key.jks'
+          -Pandroid.injected.signing.store.password='${{ secrets.KEYSTORE_PASSWORD }}'
+          -Pandroid.injected.signing.key.alias='${{ secrets.KEYSTORE_KEY_NAME }}'
+          -Pandroid.injected.signing.key.password='${{ secrets.KEYSTORE_KEY_PASSWORD }}'
 
       - name: Build release APK
         run: >
@@ -42,7 +51,16 @@ jobs:
       - name: Cleanup signing keystore
         run: rm $GITHUB_WORKSPACE/signing-key.jks
 
-      - name: Create release
+      - name: Create Google Play Internal Testing release
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          packageName: com.zhenxiang.langctrl
+          releaseFiles: app/build/outputs/bundle/release/app-release.aab
+          tracks: internal
+          status: completed
+
+      - name: Create GitHub Release draft
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
