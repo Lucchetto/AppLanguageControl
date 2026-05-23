@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import com.zhenxiang.langctrl.ui.AppLanguageControlScreen
+import com.zhenxiang.langctrl.navigation.AppNavigation
 import com.zhenxiang.langctrl.ui.AppListViewModel
 import com.zhenxiang.langctrl.ui.theme.AppLanguageControlTheme
 
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AppLanguageControlTheme {
-                AppLanguageControlScreen(viewModel = viewModel)
+                AppNavigation(viewModel = viewModel)
             }
         }
     }
