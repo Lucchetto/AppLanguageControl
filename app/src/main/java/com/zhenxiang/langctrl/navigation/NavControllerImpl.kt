@@ -9,4 +9,8 @@ internal class NavControllerImpl<T : NavKey>(
     override fun navigate(destination: T) {
         backStack += destination
     }
+
+    override fun popBackStack() {
+        backStack.removeAt(backStack.lastIndex)
+    }
 }

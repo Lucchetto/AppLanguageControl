@@ -13,4 +13,7 @@
     <string name="per_app_language_not_supported">(per app language not supported)</string>
     <string name="per_app_language_settings_unavailable">Per app language settings are not available on this device</string>
     <string name="unknown_version">unknown</string>
+    <string name="about_label">About</string>
+    <string name="about_app_title">About App Language Control</string>
+    <string name="close">Close</string>
 </resources>

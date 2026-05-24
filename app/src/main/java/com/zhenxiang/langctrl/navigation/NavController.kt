@@ -7,4 +7,6 @@ interface NavController<T: NavKey> {
     val backStack: List<T>
 
     fun navigate(destination: T)
+
+    fun popBackStack()
 }

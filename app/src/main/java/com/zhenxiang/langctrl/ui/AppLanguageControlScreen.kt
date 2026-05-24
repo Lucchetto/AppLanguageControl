@@ -55,9 +55,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.zhenxiang.langctrl.R
 import com.zhenxiang.langctrl.data.InstalledApp
+import com.zhenxiang.langctrl.navigation.AppDestination
+import com.zhenxiang.langctrl.navigation.NavController
 
 @Composable
-fun AppLanguageControlScreen(viewModel: AppListViewModel) {
+fun AppLanguageControlScreen(
+    viewModel: AppListViewModel,
+    navController: NavController<AppDestination>,
+) {
     val context = LocalContext.current
 
     AppLanguageControlContent(
@@ -69,6 +74,9 @@ fun AppLanguageControlScreen(viewModel: AppListViewModel) {
                 context = context,
                 packageName = packageName
             )
+        },
+        {
+            navController.navigate(AppDestination.About)
         }
     )
 }
@@ -79,38 +87,13 @@ private fun AppLanguageControlContent(
     uiState: AppListUiState,
     onSearchQueryChange: (String) -> Unit,
     onAppFilterChange: (AppFilter) -> Unit,
-    onSupportedAppClick: (String) -> Unit
+    onSupportedAppClick: (String) -> Unit,
+    onOpenAbout: () -> Unit,
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = {
-            @OptIn(ExperimentalMaterial3ExpressiveApi::class)
-            TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(id = R.string.installed_apps),
-                        style = MaterialTheme.typography.headlineSmall,
-                        fontWeight = FontWeight.SemiBold
-                    )
-                },
-                subtitle = {
-                    Text(
-                        text = if (uiState.isLoading) {
-                            stringResource(id = R.string.loading_apps)
-                        } else if (uiState.searchQuery.isNotBlank() || uiState.appFilter != AppFilter.ALL) {
-                            stringResource(
-                                id = R.string.filtered_apps_found,
-                                uiState.apps.size,
-                                uiState.totalAppCount
-                            )
-                        } else {
-                            stringResource(id = R.string.apps_found, uiState.apps.size)
-                        },
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                },
-            )
+            TopBar(uiState, onOpenAbout)
         },
         contentWindowInsets = WindowInsets.safeDrawing,
     ) { innerPadding ->
@@ -221,6 +204,50 @@ private fun AppLanguageControlContent(
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
+@Composable
+private fun TopBar(
+    uiState: AppListUiState,
+    onOpenAbout: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    TopAppBar(
+        title = {
+            Text(
+                text = stringResource(id = R.string.installed_apps),
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.SemiBold
+            )
+        },
+        subtitle = {
+            Text(
+                text = if (uiState.isLoading) {
+                    stringResource(id = R.string.loading_apps)
+                } else if (uiState.searchQuery.isNotBlank() || uiState.appFilter != AppFilter.ALL) {
+                    stringResource(
+                        id = R.string.filtered_apps_found,
+                        uiState.apps.size,
+                        uiState.totalAppCount
+                    )
+                } else {
+                    stringResource(id = R.string.apps_found, uiState.apps.size)
+                },
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        },
+        modifier = modifier,
+        actions = {
+            IconButton(onClick = onOpenAbout) {
+                Icon(
+                    painterResource(R.drawable.ic_info_24),
+                    contentDescription = stringResource(R.string.about_label),
+                )
+            }
+        }
+    )
+}
+
 @Composable
 private fun AppListItem(
     app: InstalledApp,
@@ -274,19 +301,6 @@ private fun AppListItem(
                     color = MaterialTheme.colorScheme.error
                 )
             }
-        }
-    }
-}
-
-@Composable
-private fun DrawableIcon(
-    drawable: Drawable,
-    modifier: Modifier = Modifier
-) {
-    Canvas(modifier = modifier) {
-        drawIntoCanvas { canvas ->
-            drawable.setBounds(0, 0, size.width.toInt(), size.height.toInt())
-            drawable.draw(canvas.nativeCanvas)
         }
     }
 }

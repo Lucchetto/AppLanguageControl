@@ -8,4 +8,7 @@ sealed class AppDestination : NavKey {
 
     @Serializable
     data object Home : AppDestination()
+
+    @Serializable
+    data object About : AppDestination()
 }
