@@ -2,12 +2,15 @@
 
 package com.zhenxiang.langctrl.ui
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialogDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
@@ -26,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -158,17 +162,35 @@ fun AboutDialogContent(
         },
         { Text(stringResource(R.string.about_app_title)) },
         {
-            CompositionLocalProvider(
-                LocalTextStyle provides LocalTextStyle.current.copy(textAlign = TextAlign.Center)
-            ) {
-                Text(
-                    stringResource(
-                        id = R.string.app_version,
-                        BuildConfig.VERSION_NAME,
-                        BuildConfig.VERSION_CODE
-                    )
-                )
-            }
+           Column(
+               verticalArrangement = Arrangement.spacedBy(8.dp)
+           ) {
+               CompositionLocalProvider(
+                   LocalTextStyle provides LocalTextStyle.current.copy(textAlign = TextAlign.Center)
+               ) {
+                   Text(
+                       stringResource(
+                           id = R.string.app_version,
+                           BuildConfig.VERSION_NAME,
+                           BuildConfig.VERSION_CODE
+                       )
+                   )
+               }
+               Row {
+                   TooltipIconButton(onClick = {}, contentDescription = "") {
+                       Icon(
+                           painterResource(R.drawable.ic_github_24),
+                           contentDescription = "",
+                       )
+                   }
+                   TooltipIconButton(onClick = {}, contentDescription = "") {
+                       Icon(
+                           painterResource(R.drawable.ic_balance_24),
+                           contentDescription = "",
+                       )
+                   }
+               }
+           }
         },
         shape = AlertDialogDefaults.shape,
         containerColor = AlertDialogDefaults.containerColor,
