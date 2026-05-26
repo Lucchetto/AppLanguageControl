@@ -33,7 +33,6 @@ import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -129,13 +128,16 @@ private fun AppLanguageControlContent(
                     },
                     trailingIcon = {
                         if (uiState.searchQuery.isNotEmpty()) {
-                            IconButton(
+                            val contentDescription = stringResource(id = R.string.clear_search)
+
+                            TooltipIconButton(
                                 onClick = { onSearchQueryChange("") },
+                                contentDescription,
                                 enabled = !uiState.isLoading
                             ) {
                                 Icon(
                                     painter = painterResource(id = R.drawable.ic_close_24),
-                                    contentDescription = stringResource(id = R.string.clear_search)
+                                    contentDescription = contentDescription
                                 )
                             }
                         }
@@ -234,10 +236,12 @@ private fun TopBar(
         },
         modifier = modifier,
         actions = {
-            IconButton(onClick = onOpenAbout) {
+            val contentDescription = stringResource(R.string.about_label)
+
+            TooltipIconButton(onClick = onOpenAbout, contentDescription = contentDescription) {
                 Icon(
                     painterResource(R.drawable.ic_info_24),
-                    contentDescription = stringResource(R.string.about_label),
+                    contentDescription = contentDescription,
                 )
             }
         }
