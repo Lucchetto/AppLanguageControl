@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Uygulama Dil Kontrolü</string>
+    <string name="installed_apps">Yüklü uygulamalar</string>
+    <string name="loading_apps">Uygulamalar yükleniyor</string>
+    <string name="apps_found">%1$d uygulama bulundu</string>
+    <string name="filtered_apps_found">%2$d uygulamadan %1$d\'i bulundu</string>
+    <string name="search">Ara</string>
+    <string name="search_placeholder">Uygulama veya paket adı</string>
+    <string name="clear_search">Aramayı temizle</string>
+    <string name="filter_all_apps">Tümü</string>
+    <string name="filter_per_app_language">Uygulama başına dil</string>
+    <string name="app_version">Sürüm %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(uygulama başına dil desteklenmiyor)</string>
+    <string name="per_app_language_settings_unavailable">Uygulama başına dil ayarları bu cihazda kullanılamıyor</string>
+    <string name="unknown_version">bilinmiyor</string>
+    <string name="about_label">Hakkında</string>
+    <string name="about_app_title">Uygulama Dil Kontrolü Hakkında</string>
+    <string name="close">Kapat</string>
+</resources>

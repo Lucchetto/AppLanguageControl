@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ovládání jazyka aplikace</string>
+    <string name="installed_apps">Nainstalované aplikace</string>
+    <string name="loading_apps">Načítání aplikací</string>
+    <string name="apps_found">Nalezeno %1$d aplikací</string>
+    <string name="filtered_apps_found">Nalezeno %1$d z %2$d aplikací</string>
+    <string name="search">Hledat</string>
+    <string name="search_placeholder">Název aplikace nebo balíčku</string>
+    <string name="clear_search">Smazat hledání</string>
+    <string name="filter_all_apps">Vše</string>
+    <string name="filter_per_app_language">Podle jazyka aplikace</string>
+    <string name="app_version">Verze %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(jazyk podle aplikace není podporován)</string>
+    <string name="per_app_language_settings_unavailable">Nastavení jazyka podle aplikací není na tomto zařízení k dispozici</string>
+    <string name="unknown_version">neznámá</string>
+    <string name="about_label">O aplikaci</string>
+    <string name="about_app_title">O aplikaci Ovládání jazyka</string>
+    <string name="close">Zavřít</string>
+</resources>

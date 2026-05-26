@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">App Sprogkontrol</string>
+    <string name="installed_apps">Installerede apps</string>
+    <string name="loading_apps">Indlæser apps</string>
+    <string name="apps_found">%1$d apps fundet</string>
+    <string name="filtered_apps_found">%1$d af %2$d apps fundet</string>
+    <string name="search">Søg</string>
+    <string name="search_placeholder">App- eller pakkenavn</string>
+    <string name="clear_search">Ryd søgning</string>
+    <string name="filter_all_apps">Alle</string>
+    <string name="filter_per_app_language">Per app sprog</string>
+    <string name="app_version">Version %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(per app sprog ikke understøttet)</string>
+    <string name="per_app_language_settings_unavailable">Per app sprogindstillinger er ikke tilgængelige på denne enhed</string>
+    <string name="unknown_version">ukendt</string>
+    <string name="about_label">Om</string>
+    <string name="about_app_title">Om App Sprogkontrol</string>
+    <string name="close">Luk</string>
+</resources>

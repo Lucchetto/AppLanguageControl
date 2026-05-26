@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">App-Sprachsteuerung</string>
+    <string name="installed_apps">Installierte Apps</string>
+    <string name="loading_apps">Apps werden geladen</string>
+    <string name="apps_found">%1$d Apps gefunden</string>
+    <string name="filtered_apps_found">%1$d von %2$d Apps gefunden</string>
+    <string name="search">Suche</string>
+    <string name="search_placeholder">App- oder Paketname</string>
+    <string name="clear_search">Suche löschen</string>
+    <string name="filter_all_apps">Alle</string>
+    <string name="filter_per_app_language">Pro App-Sprache</string>
+    <string name="app_version">Version %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(Pro-App-Sprache nicht unterstützt)</string>
+    <string name="per_app_language_settings_unavailable">Pro-App-Spracheinstellungen sind auf diesem Gerät nicht verfügbar</string>
+    <string name="unknown_version">unbekannt</string>
+    <string name="about_label">Über</string>
+    <string name="about_app_title">Über App-Sprachsteuerung</string>
+    <string name="close">Schließen</string>
+</resources>
