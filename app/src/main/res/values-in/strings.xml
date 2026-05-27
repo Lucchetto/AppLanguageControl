@@ -16,4 +16,6 @@
     <string name="about_label">Tentang</string>
     <string name="about_app_title">Tentang Kontrol Bahasa Aplikasi</string>
     <string name="close">Tutup</string>
+    <string name="open_github">Buka repositori GitHub</string>
+    <string name="open_license">Lihat lisensi</string>
 </resources>

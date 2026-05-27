@@ -16,4 +16,6 @@
     <string name="about_label">このアプリについて</string>
     <string name="about_app_title">アプリ言語設定について</string>
     <string name="close">閉じる</string>
+    <string name="open_github">GitHubリポジトリを開く</string>
+    <string name="open_license">ライセンスを表示</string>
 </resources>

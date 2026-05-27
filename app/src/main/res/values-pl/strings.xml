@@ -16,4 +16,6 @@
     <string name="about_label">O aplikacji</string>
     <string name="about_app_title">O aplikacji Sterowanie Językiem Aplikacji</string>
     <string name="close">Zamknij</string>
+    <string name="open_github">Otwórz repozytorium GitHub</string>
+    <string name="open_license">Wyświetl licencję</string>
 </resources>

@@ -16,4 +16,6 @@
     <string name="about_label">حول</string>
     <string name="about_app_title">حول التحكم في لغة التطبيق</string>
     <string name="close">إغلاق</string>
+    <string name="open_github">فتح مستودع GitHub</string>
+    <string name="open_license">عرض الترخيص</string>
 </resources>

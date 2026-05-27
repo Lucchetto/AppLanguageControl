@@ -16,4 +16,6 @@
     <string name="about_label">Tietoja</string>
     <string name="about_app_title">Tietoja sovelluksesta Sovelluksen kielenhallinta</string>
     <string name="close">Sulje</string>
+    <string name="open_github">Avaa GitHub-säilö</string>
+    <string name="open_license">Näytä lisenssi</string>
 </resources>

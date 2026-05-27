@@ -16,4 +16,6 @@
     <string name="about_label">Over</string>
     <string name="about_app_title">Over App Taalbeheer</string>
     <string name="close">Sluiten</string>
+    <string name="open_github">GitHub-repository openen</string>
+    <string name="open_license">Licentie bekijken</string>
 </resources>

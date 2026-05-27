@@ -16,4 +16,6 @@
     <string name="about_label">Hakkında</string>
     <string name="about_app_title">Uygulama Dil Kontrolü Hakkında</string>
     <string name="close">Kapat</string>
+    <string name="open_github">GitHub deposunu aç</string>
+    <string name="open_license">Lisansı görüntüle</string>
 </resources>

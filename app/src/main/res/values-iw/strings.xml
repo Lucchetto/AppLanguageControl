@@ -16,4 +16,6 @@
     <string name="about_label">אודות</string>
     <string name="about_app_title">אודות בקרת שפת האפליקציה</string>
     <string name="close">סגור</string>
+    <string name="open_github">פתח מאגר GitHub</string>
+    <string name="open_license">הצג רישיון</string>
 </resources>

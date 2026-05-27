@@ -16,4 +16,6 @@
     <string name="about_label">Despre</string>
     <string name="about_app_title">Despre Controlul Limbii Aplicației</string>
     <string name="close">Închide</string>
+    <string name="open_github">Deschide depozitul GitHub</string>
+    <string name="open_license">Vezi licența</string>
 </resources>

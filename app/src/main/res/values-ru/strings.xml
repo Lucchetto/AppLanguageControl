@@ -16,4 +16,6 @@
     <string name="about_label">О приложении</string>
     <string name="about_app_title">Об управлении языком приложения</string>
     <string name="close">Закрыть</string>
+    <string name="open_github">Открыть репозиторий GitHub</string>
+    <string name="open_license">Просмотр лицензии</string>
 </resources>

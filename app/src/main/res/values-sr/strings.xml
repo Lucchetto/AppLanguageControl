@@ -16,4 +16,6 @@
     <string name="about_label">O aplikaciji</string>
     <string name="about_app_title">O Kontroli Jezika Aplikacije</string>
     <string name="close">Zatvori</string>
+    <string name="open_github">Otvori GitHub repozitorijum</string>
+    <string name="open_license">Prikaži licencu</string>
 </resources>

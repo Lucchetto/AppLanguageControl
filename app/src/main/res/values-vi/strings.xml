@@ -16,4 +16,6 @@
     <string name="about_label">Giới thiệu</string>
     <string name="about_app_title">Giới thiệu về Kiểm soát Ngôn ngữ Ứng dụng</string>
     <string name="close">Đóng</string>
+    <string name="open_github">Mở kho lưu trữ GitHub</string>
+    <string name="open_license">Xem giấy phép</string>
 </resources>

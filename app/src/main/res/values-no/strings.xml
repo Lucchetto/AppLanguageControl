@@ -16,4 +16,6 @@
     <string name="about_label">Om</string>
     <string name="about_app_title">Om App Språkkontroll</string>
     <string name="close">Lukk</string>
+    <string name="open_github">Åpne GitHub-lager</string>
+    <string name="open_license">Vis lisens</string>
 </resources>

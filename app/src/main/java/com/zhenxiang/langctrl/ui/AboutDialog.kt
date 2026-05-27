@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.zhenxiang.langctrl.BuildConfig
+import com.zhenxiang.langctrl.IntentUtils
 import com.zhenxiang.langctrl.R
 import com.zhenxiang.langctrl.navigation.AppDestination
 import com.zhenxiang.langctrl.navigation.NavController
@@ -143,6 +144,8 @@ fun AboutDialogContent(
     onDismissRequest: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+
     AlertDialogContent(
         {
             TextButton(onClick = onDismissRequest) {
@@ -151,7 +154,6 @@ fun AboutDialogContent(
         },
         modifier,
         {
-            val context = LocalContext.current
             val icon = remember {
                 requireNotNull(
                     context.packageManager?.getApplicationIcon(context.applicationInfo) ?: ContextCompat.getDrawable(context, R.drawable.ic_info_24)
@@ -177,16 +179,30 @@ fun AboutDialogContent(
                    )
                }
                Row {
-                   TooltipIconButton(onClick = {}, contentDescription = "") {
+                   TooltipIconButton(
+                       onClick = {
+                           val intent = IntentUtils.openStringUriIntent(
+                               "https://github.com/Lucchetto/AppLanguageControl"
+                           )
+
+                           if (intent.resolveActivity(context.packageManager) != null) {
+                               context.startActivity(intent)
+                           }
+                       },
+                       contentDescription = stringResource(R.string.open_github),
+                   ) {
                        Icon(
                            painterResource(R.drawable.ic_github_24),
-                           contentDescription = "",
+                           contentDescription = stringResource(R.string.open_github),
                        )
                    }
-                   TooltipIconButton(onClick = {}, contentDescription = "") {
+                   TooltipIconButton(
+                       onClick = {},
+                       contentDescription = stringResource(R.string.open_license)
+                   ) {
                        Icon(
                            painterResource(R.drawable.ic_balance_24),
-                           contentDescription = "",
+                           contentDescription = stringResource(R.string.open_license),
                        )
                    }
                }

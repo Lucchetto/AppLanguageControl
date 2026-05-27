@@ -16,4 +16,6 @@
     <string name="about_label">Haqqında</string>
     <string name="about_app_title">Proqram Dil İdarəsi haqqında</string>
     <string name="close">Bağla</string>
+    <string name="open_github">GitHub deposunu aç</string>
+    <string name="open_license">Lisenziyaya bax</string>
 </resources>

@@ -16,4 +16,6 @@
     <string name="about_label">O aplikaci</string>
     <string name="about_app_title">O aplikaci Ovládání jazyka</string>
     <string name="close">Zavřít</string>
+    <string name="open_github">Otevřít GitHub repozitář</string>
+    <string name="open_license">Zobrazit licenci</string>
 </resources>

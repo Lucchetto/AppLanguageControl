@@ -16,4 +16,6 @@
     <string name="about_label">關於</string>
     <string name="about_app_title">關於應用程式語言控制</string>
     <string name="close">關閉</string>
+    <string name="open_github">開啟 GitHub 儲存庫</string>
+    <string name="open_license">檢視授權</string>
 </resources>

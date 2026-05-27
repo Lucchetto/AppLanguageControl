@@ -16,4 +16,6 @@
     <string name="about_label">Oor</string>
     <string name="about_app_title">Oor App Taalbeheer</string>
     <string name="close">Maak toe</string>
+    <string name="open_github">Maak GitHub-bewaarplek oop</string>
+    <string name="open_license">Bekyk lisensie</string>
 </resources>

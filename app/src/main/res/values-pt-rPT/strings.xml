@@ -16,4 +16,6 @@
     <string name="about_label">Acerca de</string>
     <string name="about_app_title">Acerca do Controlo de Idioma da App</string>
     <string name="close">Fechar</string>
+    <string name="open_github">Abrir repositório do GitHub</string>
+    <string name="open_license">Ver licença</string>
 </resources>

@@ -16,4 +16,6 @@
     <string name="about_label">Tungkol sa</string>
     <string name="about_app_title">Tungkol sa Kontrol sa Wika ng App</string>
     <string name="close">Isara</string>
+    <string name="open_github">Buksan ang GitHub repository</string>
+    <string name="open_license">Tingnan ang lisensya</string>
 </resources>

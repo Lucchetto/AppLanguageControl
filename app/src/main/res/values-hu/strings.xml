@@ -16,4 +16,6 @@
     <string name="about_label">Névjegy</string>
     <string name="about_app_title">Névjegy — Alkalmazás Nyelvvezérlése</string>
     <string name="close">Bezárás</string>
+    <string name="open_github">GitHub-adattár megnyitása</string>
+    <string name="open_license">Licenc megtekintése</string>
 </resources>

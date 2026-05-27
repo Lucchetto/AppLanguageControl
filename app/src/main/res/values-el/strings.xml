@@ -16,4 +16,6 @@
     <string name="about_label">Σχετικά</string>
     <string name="about_app_title">Σχετικά με τον Έλεγχο Γλώσσας Εφαρμογής</string>
     <string name="close">Κλείσιμο</string>
+    <string name="open_github">Άνοιγμα αποθετηρίου GitHub</string>
+    <string name="open_license">Προβολή άδειας</string>
 </resources>

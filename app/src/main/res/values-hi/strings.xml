@@ -16,4 +16,6 @@
     <string name="about_label">हमारे बारे में</string>
     <string name="about_app_title">ऐप भाषा नियंत्रण के बारे में</string>
     <string name="close">बंद करें</string>
+    <string name="open_github">GitHub रिपॉजिटरी खोलें</string>
+    <string name="open_license">लाइसेंस देखें</string>
 </resources>

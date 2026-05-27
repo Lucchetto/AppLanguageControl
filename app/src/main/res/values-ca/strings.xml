@@ -16,4 +16,6 @@
     <string name="about_label">Quant a</string>
     <string name="about_app_title">Quant a Control de Idioma de l\'App</string>
     <string name="close">Tancar</string>
+    <string name="open_github">Obre el repositori de GitHub</string>
+    <string name="open_license">Mostra la llicència</string>
 </resources>

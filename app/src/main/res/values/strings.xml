@@ -16,4 +16,6 @@
     <string name="about_label">About</string>
     <string name="about_app_title">About App Language Control</string>
     <string name="close">Close</string>
+    <string name="open_github">Open GitHub repository</string>
+    <string name="open_license">View license</string>
 </resources>
