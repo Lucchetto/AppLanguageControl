@@ -5,6 +5,16 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+// ─── License asset ────────────────────────────────────────────
+val licenseAssetDir = layout.buildDirectory.dir("intermediates/license")
+
+val copyLicense by tasks.registering(Copy::class) {
+    group = "build"
+    description = "Copies LICENSE.md into build dir for bundling as app asset"
+    from(rootProject.file("LICENSE.md"))
+    into(licenseAssetDir)
+}
+
 android {
     namespace = "com.zhenxiang.langctrl"
     compileSdk {
@@ -44,6 +54,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    sourceSets {
+        getByName("main") {
+            assets.srcDir(licenseAssetDir.get())
+        }
+    }
     buildFeatures {
         compose = true
     }
@@ -51,6 +66,11 @@ android {
         generateLocaleConfig = true
     }
 }
+
+// Wire the copy task into the build graph so the merge asset tasks
+// always run after the license file has been staged.
+tasks.matching { it.name.startsWith("merge") && it.name.endsWith("Assets") }
+    .configureEach { dependsOn(copyLicense) }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
