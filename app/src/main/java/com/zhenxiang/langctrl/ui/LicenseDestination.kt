@@ -1,4 +1,4 @@
-package com.zhenxiang.langctrl
+package com.zhenxiang.langctrl.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -6,8 +6,6 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.zhenxiang.langctrl.navigation.AppDestination
 import com.zhenxiang.langctrl.navigation.NavController
-import com.zhenxiang.langctrl.ui.LicenseScreen
-import com.zhenxiang.langctrl.ui.LicenseViewModel
 
 @Composable
 fun LicenseDestination(

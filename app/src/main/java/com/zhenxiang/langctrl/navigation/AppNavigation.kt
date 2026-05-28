@@ -2,21 +2,17 @@ package com.zhenxiang.langctrl.navigation
 
 import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.navigation3.rememberViewModelStoreNavEntryDecorator
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.scene.DialogSceneStrategy
 import androidx.navigation3.scene.SinglePaneSceneStrategy
 import androidx.navigation3.ui.NavDisplay
-import com.zhenxiang.langctrl.LicenseDestination
+import com.zhenxiang.langctrl.ui.LicenseDestination
 import com.zhenxiang.langctrl.ui.AboutDialog
 import com.zhenxiang.langctrl.ui.AppLanguageControlScreen
 import com.zhenxiang.langctrl.ui.AppListViewModel
-import com.zhenxiang.langctrl.ui.LicenseViewModel
 import com.zhenxiang.langctrl.ui.MaterialNavigationAnimation
 
 @Composable
