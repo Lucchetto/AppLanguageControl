@@ -46,7 +46,11 @@ import com.zhenxiang.langctrl.ui.theme.AppLanguageControlTheme
 
 @Composable
 fun AboutDialog(navController: NavController<AppDestination>) = AboutDialogContent(
-    navController::popBackStack
+    onDismissRequest = navController::popBackStack,
+    onOpenLicense = {
+        navController.popBackStack()
+        navController.navigate(AppDestination.License)
+    }
 )
 
 private val IconPadding = PaddingValues(bottom = 16.dp)
@@ -142,6 +146,7 @@ internal fun AlertDialogContent(
 @Composable
 fun AboutDialogContent(
     onDismissRequest: () -> Unit,
+    onOpenLicense: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -197,7 +202,7 @@ fun AboutDialogContent(
                        )
                    }
                    TooltipIconButton(
-                       onClick = {},
+                       onClick = onOpenLicense,
                        contentDescription = stringResource(R.string.open_license)
                    ) {
                        Icon(
@@ -221,5 +226,5 @@ fun AboutDialogContent(
 @Composable
 @Preview
 fun AboutDialogContentPreview() = AppLanguageControlTheme {
-    AboutDialogContent({})
+    AboutDialogContent(onDismissRequest = {}, onOpenLicense = {})
 }

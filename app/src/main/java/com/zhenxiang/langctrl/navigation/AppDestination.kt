@@ -11,4 +11,7 @@ sealed class AppDestination : NavKey {
 
     @Serializable
     data object About : AppDestination()
+
+    @Serializable
+    data object License : AppDestination()
 }

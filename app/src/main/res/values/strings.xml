@@ -18,4 +18,7 @@
     <string name="close">Close</string>
     <string name="open_github">Open GitHub repository</string>
     <string name="open_license">View license</string>
+    <string name="license_title">License</string>
+    <string name="license_empty">No license text available.</string>
+    <string name="back">Back</string>
 </resources>
