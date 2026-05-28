@@ -1,5 +1,6 @@
 package com.zhenxiang.langctrl.navigation
 
+import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -16,6 +17,7 @@ import com.zhenxiang.langctrl.ui.AboutDialog
 import com.zhenxiang.langctrl.ui.AppLanguageControlScreen
 import com.zhenxiang.langctrl.ui.AppListViewModel
 import com.zhenxiang.langctrl.ui.LicenseViewModel
+import com.zhenxiang.langctrl.ui.MaterialNavigationAnimation
 
 @Composable
 fun AppNavigation(viewModel: AppListViewModel) {
@@ -32,6 +34,14 @@ fun AppNavigation(viewModel: AppListViewModel) {
         ),
         sceneStrategies = remember {
             listOf(DialogSceneStrategy(), SinglePaneSceneStrategy())
+        },
+        transitionSpec = {
+            MaterialNavigationAnimation.enterTransition.invoke(this) togetherWith
+                    MaterialNavigationAnimation.exitTransition.invoke(this)
+        },
+        popTransitionSpec = {
+            MaterialNavigationAnimation.popEnterTransition.invoke(this) togetherWith
+                    MaterialNavigationAnimation.popExitTransition.invoke(this)
         },
         entryProvider = entryProvider {
             entry(AppDestination.Home) {
