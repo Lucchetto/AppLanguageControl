@@ -14,6 +14,7 @@ val copyLicense by tasks.registering(Copy::class) {
     from(rootProject.file("LICENSE.md"))
     into(licenseAssetDir)
 }
+tasks.getByName("preBuild").dependsOn(copyLicense)
 
 android {
     namespace = "com.zhenxiang.langctrl"
@@ -66,11 +67,6 @@ android {
         generateLocaleConfig = true
     }
 }
-
-// Wire the copy task into the build graph so the merge asset tasks
-// always run after the license file has been staged.
-tasks.matching { it.name.startsWith("merge") && it.name.endsWith("Assets") }
-    .configureEach { dependsOn(copyLicense) }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
