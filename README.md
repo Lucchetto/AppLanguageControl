@@ -4,9 +4,7 @@ App Language Control is a small Android utility for opening the per-app language
 
 ## Why this exists
 
-Android 13 added per-app language preferences to AOSP, letting users choose a different language for individual apps without changing the whole system language. Some Android skins, including HyperOS, hide or make this settings page difficult to reach even though the underlying Android capability is still present.
-
-This app provides a direct, focused entry point to that feature.
+Android 13 added per-app language preferences to AOSP, letting users choose a different language for individual apps without changing the whole system language. Manufacturers like Xiaomi, POCO, Redmi and Infinix hide or make this settings page difficult to reach even though the underlying Android capability is still present.
 
 ## Core feature
 
@@ -16,6 +14,12 @@ This app provides a direct, focused entry point to that feature.
 - Opens Android's built-in per-app language settings for a selected supported app.
 
 The app does not translate apps or force unsupported apps to expose languages. It links to the native Android settings screen for apps that already provide a valid locale configuration.
+
+## Screenshots
+
+<img src="assets/Screenshot_2026-05-30-17-30-43-218_com.zhenxiang.langctrl.jpg" width="200" alt="App list"> <img src="assets/Screenshot_2026-05-30-17-21-01-988_com.zhenxiang.langctrl.jpg" width="200" alt="App list">
+
+<img src="assets/Screenshot_2026-05-30-17-20-34-169_com.android.settings.jpg" width="200" alt="Per-app language settings"> <img src="assets/Screenshot_2026-05-30-17-20-43-898_com.android.settings.jpg" width="200" alt="Per-app language settings">
 
 ## Requirements
 
