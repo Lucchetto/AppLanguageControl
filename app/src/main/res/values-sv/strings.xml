@@ -19,4 +19,8 @@
     <string name="close">Stäng</string>
     <string name="open_github">Öppna GitHub-lagringsplats</string>
     <string name="open_license">Visa licens</string>
+    <string name="license_title">Licens</string>
+    <string name="license_empty">Ingen licens text tillgänglig.</string>
+    <string name="back">Tillbaka</string>
+    <string name="more_apps">Kolla in mina andra appar</string>
 </resources>

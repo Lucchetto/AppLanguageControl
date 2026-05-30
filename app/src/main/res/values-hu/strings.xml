@@ -19,4 +19,8 @@
     <string name="close">Bezárás</string>
     <string name="open_github">GitHub-adattár megnyitása</string>
     <string name="open_license">Licenc megtekintése</string>
+    <string name="license_title">Licenc</string>
+    <string name="license_empty">Nincs elérhető licencszöveg.</string>
+    <string name="back">Vissza</string>
+    <string name="more_apps">Nézd meg a többi alkalmazásomat</string>
 </resources>

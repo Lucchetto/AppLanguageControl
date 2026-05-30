@@ -19,4 +19,8 @@
     <string name="close">Sulje</string>
     <string name="open_github">Avaa GitHub-säilö</string>
     <string name="open_license">Näytä lisenssi</string>
+    <string name="license_title">Lisenssi</string>
+    <string name="license_empty">Lisenssitekstiä ei ole saatavilla.</string>
+    <string name="back">Takaisin</string>
+    <string name="more_apps">Katso muut sovellukseni</string>
 </resources>

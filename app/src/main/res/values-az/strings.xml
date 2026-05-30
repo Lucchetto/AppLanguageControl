@@ -19,4 +19,8 @@
     <string name="close">Bağla</string>
     <string name="open_github">GitHub deposunu aç</string>
     <string name="open_license">Lisenziyaya bax</string>
+    <string name="license_title">Lisenziya</string>
+    <string name="license_empty">Lisenziya mətni mövcud deyil.</string>
+    <string name="back">Geri</string>
+    <string name="more_apps">Digər proqramlarıma baxın</string>
 </resources>

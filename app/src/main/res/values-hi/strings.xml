@@ -19,4 +19,8 @@
     <string name="close">बंद करें</string>
     <string name="open_github">GitHub रिपॉजिटरी खोलें</string>
     <string name="open_license">लाइसेंस देखें</string>
+    <string name="license_title">लाइसेंस</string>
+    <string name="license_empty">कोई लाइसेंस पाठ उपलब्ध नहीं है।</string>
+    <string name="back">वापस</string>
+    <string name="more_apps">मेरे अन्य ऐप्स देखें</string>
 </resources>

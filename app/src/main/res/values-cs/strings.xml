@@ -19,4 +19,8 @@
     <string name="close">Zavřít</string>
     <string name="open_github">Otevřít GitHub repozitář</string>
     <string name="open_license">Zobrazit licenci</string>
+    <string name="license_title">Licence</string>
+    <string name="license_empty">Není k dispozici žádný text licence.</string>
+    <string name="back">Zpět</string>
+    <string name="more_apps">Podívejte se na mé další aplikace</string>
 </resources>

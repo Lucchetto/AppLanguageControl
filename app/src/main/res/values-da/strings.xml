@@ -19,4 +19,8 @@
     <string name="close">Luk</string>
     <string name="open_github">Åbn GitHub-lager</string>
     <string name="open_license">Se licens</string>
+    <string name="license_title">Licens</string>
+    <string name="license_empty">Ingen licens tekst tilgængelig.</string>
+    <string name="back">Tilbage</string>
+    <string name="more_apps">Se mine andre apps</string>
 </resources>

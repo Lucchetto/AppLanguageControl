@@ -19,4 +19,8 @@
     <string name="close">닫기</string>
     <string name="open_github">GitHub 저장소 열기</string>
     <string name="open_license">라이선스 보기</string>
+    <string name="license_title">라이선스</string>
+    <string name="license_empty">라이선스 텍스트를 사용할 수 없습니다.</string>
+    <string name="back">뒤로</string>
+    <string name="more_apps">내 다른 앱 살펴보기</string>
 </resources>

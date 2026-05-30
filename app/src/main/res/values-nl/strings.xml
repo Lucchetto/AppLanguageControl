@@ -19,4 +19,8 @@
     <string name="close">Sluiten</string>
     <string name="open_github">GitHub-repository openen</string>
     <string name="open_license">Licentie bekijken</string>
+    <string name="license_title">Licentie</string>
+    <string name="license_empty">Geen licentietekst beschikbaar.</string>
+    <string name="back">Terug</string>
+    <string name="more_apps">Bekijk mijn andere apps</string>
 </resources>

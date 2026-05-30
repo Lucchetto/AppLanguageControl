@@ -19,4 +19,8 @@
     <string name="close">Закрити</string>
     <string name="open_github">Відкрити репозиторій GitHub</string>
     <string name="open_license">Переглянути ліцензію</string>
+    <string name="license_title">Ліцензія</string>
+    <string name="license_empty">Текст ліцензії недоступний.</string>
+    <string name="back">Назад</string>
+    <string name="more_apps">Перегляньте мої інші застосунки</string>
 </resources>

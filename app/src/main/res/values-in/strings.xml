@@ -19,4 +19,8 @@
     <string name="close">Tutup</string>
     <string name="open_github">Buka repositori GitHub</string>
     <string name="open_license">Lihat lisensi</string>
+    <string name="license_title">Lisensi</string>
+    <string name="license_empty">Tidak ada teks lisensi yang tersedia.</string>
+    <string name="back">Kembali</string>
+    <string name="more_apps">Lihat aplikasi saya yang lain</string>
 </resources>

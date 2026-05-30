@@ -19,4 +19,8 @@
     <string name="close">Đóng</string>
     <string name="open_github">Mở kho lưu trữ GitHub</string>
     <string name="open_license">Xem giấy phép</string>
+    <string name="license_title">Giấy phép</string>
+    <string name="license_empty">Không có văn bản giấy phép nào.</string>
+    <string name="back">Quay lại</string>
+    <string name="more_apps">Xem các ứng dụng khác của tôi</string>
 </resources>

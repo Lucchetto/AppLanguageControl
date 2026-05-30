@@ -19,4 +19,8 @@
     <string name="close">Chiudi</string>
     <string name="open_github">Apri repository GitHub</string>
     <string name="open_license">Visualizza licenza</string>
+    <string name="license_title">Licenza</string>
+    <string name="license_empty">Nessun testo di licenza disponibile.</string>
+    <string name="back">Indietro</string>
+    <string name="more_apps">Scopri le mie altre app</string>
 </resources>

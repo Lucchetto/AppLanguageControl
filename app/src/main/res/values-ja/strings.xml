@@ -19,4 +19,8 @@
     <string name="close">閉じる</string>
     <string name="open_github">GitHubリポジトリを開く</string>
     <string name="open_license">ライセンスを表示</string>
+    <string name="license_title">ライセンス</string>
+    <string name="license_empty">ライセンステキストがありません。</string>
+    <string name="back">戻る</string>
+    <string name="more_apps">他のアプリもチェック</string>
 </resources>

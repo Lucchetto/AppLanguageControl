@@ -19,4 +19,8 @@
     <string name="close">Tancar</string>
     <string name="open_github">Obre el repositori de GitHub</string>
     <string name="open_license">Mostra la llicència</string>
+    <string name="license_title">Llicència</string>
+    <string name="license_empty">No hi ha text de llicència disponible.</string>
+    <string name="back">Enrere</string>
+    <string name="more_apps">Descobreix les meves altres apps</string>
 </resources>

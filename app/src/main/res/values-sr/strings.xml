@@ -19,4 +19,8 @@
     <string name="close">Zatvori</string>
     <string name="open_github">Otvori GitHub repozitorijum</string>
     <string name="open_license">Prikaži licencu</string>
+    <string name="license_title">Licenca</string>
+    <string name="license_empty">Nije dostupan tekst licence.</string>
+    <string name="back">Nazad</string>
+    <string name="more_apps">Pogledajte moje druge aplikacije</string>
 </resources>

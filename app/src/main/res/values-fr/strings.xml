@@ -19,4 +19,8 @@
     <string name="close">Fermer</string>
     <string name="open_github">Ouvrir le dépôt GitHub</string>
     <string name="open_license">Voir la licence</string>
+    <string name="license_title">Licence</string>
+    <string name="license_empty">Aucun texte de licence disponible.</string>
+    <string name="back">Retour</string>
+    <string name="more_apps">Découvrez mes autres applications</string>
 </resources>
