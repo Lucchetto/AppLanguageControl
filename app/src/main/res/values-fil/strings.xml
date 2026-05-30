@@ -9,6 +9,7 @@
     <string name="clear_search">I-clear ang paghahanap</string>
     <string name="filter_all_apps">Lahat</string>
     <string name="filter_per_app_language">Bawat wika ng app</string>
+    <string name="developed_by">Binuo ni Zhenxiang Chen</string>
     <string name="app_version">Bersyon %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(bawat wika ng app ay hindi suportado)</string>
     <string name="per_app_language_settings_unavailable">Ang mga setting ng wika bawat app ay hindi available sa device na ito</string>

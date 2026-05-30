@@ -9,6 +9,7 @@
     <string name="clear_search">清除搜尋</string>
     <string name="filter_all_apps">全部</string>
     <string name="filter_per_app_language">依應用程式語言</string>
+    <string name="developed_by">開發者：Zhenxiang Chen</string>
     <string name="app_version">版本 %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">（不支援依應用程式語言）</string>
     <string name="per_app_language_settings_unavailable">此裝置不支援依應用程式的語言設定</string>

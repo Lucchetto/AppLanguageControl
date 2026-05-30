@@ -9,6 +9,7 @@
     <string name="clear_search">Tyhjennä haku</string>
     <string name="filter_all_apps">Kaikki</string>
     <string name="filter_per_app_language">Sovelluskohtainen kieli</string>
+    <string name="developed_by">Kehittänyt Zhenxiang Chen</string>
     <string name="app_version">Versio %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(sovelluskohtaista kieltä ei tueta)</string>
     <string name="per_app_language_settings_unavailable">Sovelluskohtaiset kieliasetukset eivät ole käytettävissä tässä laitteessa</string>

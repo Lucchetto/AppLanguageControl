@@ -9,6 +9,7 @@
     <string name="clear_search">Keresés törlése</string>
     <string name="filter_all_apps">Mind</string>
     <string name="filter_per_app_language">Alkalmazás szerinti nyelv</string>
+    <string name="developed_by">Fejlesztette: Zhenxiang Chen</string>
     <string name="app_version">Verzió %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(alkalmazásonkénti nyelv nem támogatott)</string>
     <string name="per_app_language_settings_unavailable">Az alkalmazásonkénti nyelvi beállítások nem érhetők el ezen az eszközön</string>

@@ -9,6 +9,7 @@
     <string name="clear_search">खोज साफ़ करें</string>
     <string name="filter_all_apps">सभी</string>
     <string name="filter_per_app_language">प्रति ऐप भाषा</string>
+    <string name="developed_by">Zhenxiang Chen द्वारा विकसित</string>
     <string name="app_version">संस्करण %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(प्रति ऐप भाषा समर्थित नहीं)</string>
     <string name="per_app_language_settings_unavailable">प्रति ऐप भाषा सेटिंग्स इस डिवाइस पर उपलब्ध नहीं हैं</string>

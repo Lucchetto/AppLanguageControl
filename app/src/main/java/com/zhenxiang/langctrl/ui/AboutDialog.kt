@@ -170,7 +170,7 @@ fun AboutDialogContent(
         { Text(stringResource(R.string.about_app_title)) },
         {
            Column(
-               verticalArrangement = Arrangement.spacedBy(8.dp)
+               horizontalAlignment = Alignment.CenterHorizontally,
            ) {
                CompositionLocalProvider(
                    LocalTextStyle provides LocalTextStyle.current.copy(textAlign = TextAlign.Center)
@@ -182,8 +182,14 @@ fun AboutDialogContent(
                            BuildConfig.VERSION_CODE
                        )
                    )
+                   Text(
+                       stringResource(R.string.developed_by),
+                       style = MaterialTheme.typography.bodySmall,
+                   )
                }
-               Row {
+               Row(
+                   modifier = Modifier.padding(top = 8.dp)
+               ) {
                    TooltipIconButton(
                        onClick = {
                            val intent = IntentUtils.openStringUriIntent(

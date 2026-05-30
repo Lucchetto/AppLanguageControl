@@ -9,6 +9,7 @@
     <string name="clear_search">Effacer la recherche</string>
     <string name="filter_all_apps">Toutes</string>
     <string name="filter_per_app_language">Par langue de l\'app</string>
+    <string name="developed_by">Développé par Zhenxiang Chen</string>
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(langue par app non prise en charge)</string>
     <string name="per_app_language_settings_unavailable">Les paramètres de langue par application ne sont pas disponibles sur cet appareil</string>

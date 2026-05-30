@@ -9,6 +9,7 @@
     <string name="clear_search">검색 지우기</string>
     <string name="filter_all_apps">전체</string>
     <string name="filter_per_app_language">앱별 언어</string>
+    <string name="developed_by">Zhenxiang Chen 개발</string>
     <string name="app_version">버전 %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(앱별 언어 미지원)</string>
     <string name="per_app_language_settings_unavailable">이 기기에서는 앱별 언어 설정을 사용할 수 없습니다</string>

@@ -9,6 +9,7 @@
     <string name="clear_search">Εκκαθάριση αναζήτησης</string>
     <string name="filter_all_apps">Όλες</string>
     <string name="filter_per_app_language">Ανά γλώσσα εφαρμογής</string>
+    <string name="developed_by">Αναπτύχθηκε από τον Zhenxiang Chen</string>
     <string name="app_version">Έκδοση %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(γλώσσα ανά εφαρμογή δεν υποστηρίζεται)</string>
     <string name="per_app_language_settings_unavailable">Οι ρυθμίσεις γλώσσας ανά εφαρμογή δεν είναι διαθέσιμες σε αυτήν τη συσκευή</string>
