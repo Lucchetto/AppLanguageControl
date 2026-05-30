@@ -2,22 +2,38 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
+
+// ─── License asset ────────────────────────────────────────────
+val licenseAssetDir = layout.buildDirectory.dir("intermediates/license")
+
+val copyLicense by tasks.registering(Copy::class) {
+    group = "build"
+    description = "Copies LICENSE.md into build dir for bundling as app asset"
+    from(rootProject.file("LICENSE.md"))
+    into(licenseAssetDir)
+}
+tasks.getByName("preBuild").dependsOn(copyLicense)
 
 android {
     namespace = "com.zhenxiang.langctrl"
     compileSdk {
-        version = release(36)
+        version = release(37)
     }
 
     defaultConfig {
         applicationId = "com.zhenxiang.langctrl"
         minSdk = 33
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        targetSdk = 37
+        versionCode = 2
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
@@ -39,8 +55,16 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    sourceSets {
+        getByName("main") {
+            assets.srcDir(licenseAssetDir.get())
+        }
+    }
     buildFeatures {
         compose = true
+    }
+    androidResources {
+        generateLocaleConfig = true
     }
 }
 
@@ -54,6 +78,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.navigation3.ui)
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+    implementation(libs.kotlinx.serialization.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

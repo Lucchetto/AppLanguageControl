@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">التحكم في لغة التطبيق</string>
+    <string name="installed_apps">التطبيقات المثبتة</string>
+    <string name="loading_apps">جارِ تحميل التطبيقات</string>
+    <string name="apps_found">تم العثور على %1$d تطبيق</string>
+    <string name="filtered_apps_found">تم العثور على %1$d من %2$d تطبيق</string>
+    <string name="search">بحث</string>
+    <string name="search_placeholder">اسم التطبيق أو الحزمة</string>
+    <string name="clear_search">مسح البحث</string>
+    <string name="filter_all_apps">الكل</string>
+    <string name="filter_per_app_language">لغة كل تطبيق</string>
+    <string name="app_version">الإصدار %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(لغة كل تطبيق غير مدعومة)</string>
+    <string name="per_app_language_settings_unavailable">إعدادات لغة كل تطبيق غير متوفرة على هذا الجهاز</string>
+    <string name="unknown_version">غير معروف</string>
+    <string name="about_label">حول</string>
+    <string name="about_app_title">حول التحكم في لغة التطبيق</string>
+    <string name="close">إغلاق</string>
+    <string name="open_github">فتح مستودع GitHub</string>
+    <string name="open_license">عرض الترخيص</string>
+</resources>

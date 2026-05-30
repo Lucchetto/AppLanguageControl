@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Controlo de Idioma da App</string>
+    <string name="installed_apps">Apps instaladas</string>
+    <string name="loading_apps">A carregar apps</string>
+    <string name="apps_found">%1$d apps encontradas</string>
+    <string name="filtered_apps_found">%1$d de %2$d apps encontradas</string>
+    <string name="search">Pesquisar</string>
+    <string name="search_placeholder">Nome da app ou pacote</string>
+    <string name="clear_search">Limpar pesquisa</string>
+    <string name="filter_all_apps">Todas</string>
+    <string name="filter_per_app_language">Idioma por app</string>
+    <string name="app_version">Versão %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(idioma por app não suportado)</string>
+    <string name="per_app_language_settings_unavailable">As definições de idioma por app não estão disponíveis neste dispositivo</string>
+    <string name="unknown_version">desconhecida</string>
+    <string name="about_label">Acerca de</string>
+    <string name="about_app_title">Acerca do Controlo de Idioma da App</string>
+    <string name="close">Fechar</string>
+    <string name="open_github">Abrir repositório do GitHub</string>
+    <string name="open_license">Ver licença</string>
+</resources>

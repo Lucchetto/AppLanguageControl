@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">בקרת שפת האפליקציה</string>
+    <string name="installed_apps">אפליקציות מותקנות</string>
+    <string name="loading_apps">טוען אפליקציות</string>
+    <string name="apps_found">נמצאו %1$d אפליקציות</string>
+    <string name="filtered_apps_found">נמצאו %1$d מתוך %2$d אפליקציות</string>
+    <string name="search">חיפוש</string>
+    <string name="search_placeholder">שם אפליקציה או חבילה</string>
+    <string name="clear_search">נקה חיפוש</string>
+    <string name="filter_all_apps">הכל</string>
+    <string name="filter_per_app_language">שפה לפי אפליקציה</string>
+    <string name="app_version">גרסה %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(שפה לפי אפליקציה לא נתמכת)</string>
+    <string name="per_app_language_settings_unavailable">הגדרות שפה לפי אפליקציה אינן זמינות במכשיר זה</string>
+    <string name="unknown_version">לא ידוע</string>
+    <string name="about_label">אודות</string>
+    <string name="about_app_title">אודות בקרת שפת האפליקציה</string>
+    <string name="close">סגור</string>
+    <string name="open_github">פתח מאגר GitHub</string>
+    <string name="open_license">הצג רישיון</string>
+</resources>

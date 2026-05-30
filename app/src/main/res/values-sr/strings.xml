@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Kontrola Jezika Aplikacije</string>
+    <string name="installed_apps">Instalirane aplikacije</string>
+    <string name="loading_apps">Učitavanje aplikacija</string>
+    <string name="apps_found">Pronađeno %1$d aplikacija</string>
+    <string name="filtered_apps_found">Pronađeno %1$d od %2$d aplikacija</string>
+    <string name="search">Pretraga</string>
+    <string name="search_placeholder">Naziv aplikacije ili paketa</string>
+    <string name="clear_search">Obriši pretragu</string>
+    <string name="filter_all_apps">Sve</string>
+    <string name="filter_per_app_language">Jezik po aplikaciji</string>
+    <string name="app_version">Verzija %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(jezik po aplikaciji nije podržan)</string>
+    <string name="per_app_language_settings_unavailable">Podešavanja jezika po aplikaciji nisu dostupna na ovom uređaju</string>
+    <string name="unknown_version">nepoznata</string>
+    <string name="about_label">O aplikaciji</string>
+    <string name="about_app_title">O Kontroli Jezika Aplikacije</string>
+    <string name="close">Zatvori</string>
+    <string name="open_github">Otvori GitHub repozitorijum</string>
+    <string name="open_license">Prikaži licencu</string>
+</resources>

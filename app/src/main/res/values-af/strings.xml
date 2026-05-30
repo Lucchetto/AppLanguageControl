@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">App Taalbeheer</string>
+    <string name="installed_apps">Geïnstalleerde programme</string>
+    <string name="loading_apps">Laai programme</string>
+    <string name="apps_found">%1$d programme gevind</string>
+    <string name="filtered_apps_found">%1$d van %2$d programme gevind</string>
+    <string name="search">Soek</string>
+    <string name="search_placeholder">Program- of pakketnaam</string>
+    <string name="clear_search">Vee soektog uit</string>
+    <string name="filter_all_apps">Alles</string>
+    <string name="filter_per_app_language">Per app taal</string>
+    <string name="app_version">Weergawe %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(per app taal nie ondersteun nie)</string>
+    <string name="per_app_language_settings_unavailable">Per app taal instellings is nie beskikbaar op hierdie toestel nie</string>
+    <string name="unknown_version">onbekend</string>
+    <string name="about_label">Oor</string>
+    <string name="about_app_title">Oor App Taalbeheer</string>
+    <string name="close">Maak toe</string>
+    <string name="open_github">Maak GitHub-bewaarplek oop</string>
+    <string name="open_license">Bekyk lisensie</string>
+</resources>

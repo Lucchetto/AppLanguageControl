@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Control de Idioma de l\'App</string>
+    <string name="installed_apps">Aplicacions instal·lades</string>
+    <string name="loading_apps">Carregant aplicacions</string>
+    <string name="apps_found">%1$d aplicacions trobades</string>
+    <string name="filtered_apps_found">%1$d de %2$d aplicacions trobades</string>
+    <string name="search">Cercar</string>
+    <string name="search_placeholder">Nom de l\'aplicació o paquet</string>
+    <string name="clear_search">Netejar cerca</string>
+    <string name="filter_all_apps">Totes</string>
+    <string name="filter_per_app_language">Per idioma de l\'app</string>
+    <string name="app_version">Versió %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(idioma per app no compatible)</string>
+    <string name="per_app_language_settings_unavailable">La configuració d\'idioma per app no està disponible en aquest dispositiu</string>
+    <string name="unknown_version">desconegut</string>
+    <string name="about_label">Quant a</string>
+    <string name="about_app_title">Quant a Control de Idioma de l\'App</string>
+    <string name="close">Tancar</string>
+    <string name="open_github">Obre el repositori de GitHub</string>
+    <string name="open_license">Mostra la llicència</string>
+</resources>

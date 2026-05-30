@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">App Språkkontroll</string>
+    <string name="installed_apps">Installerte apper</string>
+    <string name="loading_apps">Laster apper</string>
+    <string name="apps_found">%1$d apper funnet</string>
+    <string name="filtered_apps_found">%1$d av %2$d apper funnet</string>
+    <string name="search">Søk</string>
+    <string name="search_placeholder">App- eller pakkenavn</string>
+    <string name="clear_search">Tøm søk</string>
+    <string name="filter_all_apps">Alle</string>
+    <string name="filter_per_app_language">Per app språk</string>
+    <string name="app_version">Versjon %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(per app språk ikke støttet)</string>
+    <string name="per_app_language_settings_unavailable">Per app språkinnstillinger er ikke tilgjengelige på denne enheten</string>
+    <string name="unknown_version">ukjent</string>
+    <string name="about_label">Om</string>
+    <string name="about_app_title">Om App Språkkontroll</string>
+    <string name="close">Lukk</string>
+    <string name="open_github">Åpne GitHub-lager</string>
+    <string name="open_license">Vis lisens</string>
+</resources>

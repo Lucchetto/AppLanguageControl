@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Управление языком приложения</string>
+    <string name="installed_apps">Установленные приложения</string>
+    <string name="loading_apps">Загрузка приложений</string>
+    <string name="apps_found">Найдено приложений: %1$d</string>
+    <string name="filtered_apps_found">Найдено %1$d из %2$d приложений</string>
+    <string name="search">Поиск</string>
+    <string name="search_placeholder">Название приложения или пакета</string>
+    <string name="clear_search">Очистить поиск</string>
+    <string name="filter_all_apps">Все</string>
+    <string name="filter_per_app_language">Язык для каждого приложения</string>
+    <string name="app_version">Версия %1$s (%2$d)</string>
+    <string name="per_app_language_not_supported">(язык для приложения не поддерживается)</string>
+    <string name="per_app_language_settings_unavailable">Настройки языка для приложений недоступны на этом устройстве</string>
+    <string name="unknown_version">неизвестно</string>
+    <string name="about_label">О приложении</string>
+    <string name="about_app_title">Об управлении языком приложения</string>
+    <string name="close">Закрыть</string>
+    <string name="open_github">Открыть репозиторий GitHub</string>
+    <string name="open_license">Просмотр лицензии</string>
+</resources>
