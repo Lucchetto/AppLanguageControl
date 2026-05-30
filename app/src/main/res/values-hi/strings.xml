@@ -9,6 +9,7 @@
     <string name="clear_search">खोज साफ़ करें</string>
     <string name="filter_all_apps">सभी</string>
     <string name="filter_per_app_language">प्रति ऐप भाषा</string>
+    <string name="developed_by">Zhenxiang Chen द्वारा विकसित</string>
     <string name="app_version">संस्करण %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(प्रति ऐप भाषा समर्थित नहीं)</string>
     <string name="per_app_language_settings_unavailable">प्रति ऐप भाषा सेटिंग्स इस डिवाइस पर उपलब्ध नहीं हैं</string>
@@ -18,4 +19,8 @@
     <string name="close">बंद करें</string>
     <string name="open_github">GitHub रिपॉजिटरी खोलें</string>
     <string name="open_license">लाइसेंस देखें</string>
+    <string name="license_title">लाइसेंस</string>
+    <string name="license_empty">कोई लाइसेंस पाठ उपलब्ध नहीं है।</string>
+    <string name="back">वापस</string>
+    <string name="more_apps">मेरे अन्य ऐप्स देखें</string>
 </resources>

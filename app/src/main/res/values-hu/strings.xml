@@ -9,6 +9,7 @@
     <string name="clear_search">Keresés törlése</string>
     <string name="filter_all_apps">Mind</string>
     <string name="filter_per_app_language">Alkalmazás szerinti nyelv</string>
+    <string name="developed_by">Fejlesztette: Zhenxiang Chen</string>
     <string name="app_version">Verzió %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(alkalmazásonkénti nyelv nem támogatott)</string>
     <string name="per_app_language_settings_unavailable">Az alkalmazásonkénti nyelvi beállítások nem érhetők el ezen az eszközön</string>
@@ -18,4 +19,8 @@
     <string name="close">Bezárás</string>
     <string name="open_github">GitHub-adattár megnyitása</string>
     <string name="open_license">Licenc megtekintése</string>
+    <string name="license_title">Licenc</string>
+    <string name="license_empty">Nincs elérhető licencszöveg.</string>
+    <string name="back">Vissza</string>
+    <string name="more_apps">Nézd meg a többi alkalmazásomat</string>
 </resources>

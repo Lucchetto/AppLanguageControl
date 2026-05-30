@@ -2,14 +2,16 @@
 
 package com.zhenxiang.langctrl.ui
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.AlertDialogDefaults
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalTextStyle
@@ -93,10 +95,13 @@ internal fun AlertDialogContent(
                     if (shouldUsePrecisionPointerComponentSizing.value) {
                         MaterialTheme.typography.headlineSmall.copy(
                             fontSize = 20.sp,
+                            textAlign = TextAlign.Center,
                             lineHeight = 26.sp,
                         )
                     } else {
-                        DialogTokens.HeadlineFont.value
+                        DialogTokens.HeadlineFont.value.copy(
+                            textAlign = TextAlign.Center,
+                        )
                     }
                 ProvideContentColorTextStyle(
                     contentColor = titleContentColor,
@@ -170,7 +175,7 @@ fun AboutDialogContent(
         { Text(stringResource(R.string.about_app_title)) },
         {
            Column(
-               verticalArrangement = Arrangement.spacedBy(8.dp)
+               horizontalAlignment = Alignment.CenterHorizontally,
            ) {
                CompositionLocalProvider(
                    LocalTextStyle provides LocalTextStyle.current.copy(textAlign = TextAlign.Center)
@@ -182,6 +187,31 @@ fun AboutDialogContent(
                            BuildConfig.VERSION_CODE
                        )
                    )
+                   Text(
+                       stringResource(R.string.developed_by),
+                       style = MaterialTheme.typography.bodySmall,
+                   )
+               }
+               FilledTonalButton(
+                   onClick = {
+                       val intent = IntentUtils.openStringUriIntent(
+                           "https://play.google.com/store/apps/developer?id=Zhenxiang+Chen"
+                       )
+                       if (intent.resolveActivity(context.packageManager) != null) {
+                           context.startActivity(intent)
+                       }
+                   },
+                   modifier = Modifier.padding(top = 8.dp, bottom = 8.dp),
+               ) {
+                   Icon(
+                       painterResource(R.drawable.ic_google_play_24),
+                       contentDescription = null,
+                       modifier = Modifier.size(ButtonDefaults.iconSizeFor(ButtonDefaults.MinHeight)),
+                   )
+                   Spacer(
+                       Modifier.size(ButtonDefaults.iconSpacingFor(ButtonDefaults.MinHeight))
+                   )
+                   Text(stringResource(R.string.more_apps))
                }
                Row {
                    TooltipIconButton(

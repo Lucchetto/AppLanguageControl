@@ -9,6 +9,7 @@
     <string name="clear_search">Hapus pencarian</string>
     <string name="filter_all_apps">Semua</string>
     <string name="filter_per_app_language">Per bahasa aplikasi</string>
+    <string name="developed_by">Dikembangkan oleh Zhenxiang Chen</string>
     <string name="app_version">Versi %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(bahasa per aplikasi tidak didukung)</string>
     <string name="per_app_language_settings_unavailable">Pengaturan bahasa per aplikasi tidak tersedia di perangkat ini</string>
@@ -18,4 +19,8 @@
     <string name="close">Tutup</string>
     <string name="open_github">Buka repositori GitHub</string>
     <string name="open_license">Lihat lisensi</string>
+    <string name="license_title">Lisensi</string>
+    <string name="license_empty">Tidak ada teks lisensi yang tersedia.</string>
+    <string name="back">Kembali</string>
+    <string name="more_apps">Lihat aplikasi saya yang lain</string>
 </resources>

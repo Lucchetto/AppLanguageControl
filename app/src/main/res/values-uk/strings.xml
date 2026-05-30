@@ -9,6 +9,7 @@
     <string name="clear_search">Очистити пошук</string>
     <string name="filter_all_apps">Усі</string>
     <string name="filter_per_app_language">Мова для застосунку</string>
+    <string name="developed_by">Розробник: Zhenxiang Chen</string>
     <string name="app_version">Версія %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(мова для застосунку не підтримується)</string>
     <string name="per_app_language_settings_unavailable">Налаштування мови для застосунків недоступні на цьому пристрої</string>
@@ -18,4 +19,8 @@
     <string name="close">Закрити</string>
     <string name="open_github">Відкрити репозиторій GitHub</string>
     <string name="open_license">Переглянути ліцензію</string>
+    <string name="license_title">Ліцензія</string>
+    <string name="license_empty">Текст ліцензії недоступний.</string>
+    <string name="back">Назад</string>
+    <string name="more_apps">Перегляньте мої інші застосунки</string>
 </resources>

@@ -9,6 +9,7 @@
     <string name="clear_search">נקה חיפוש</string>
     <string name="filter_all_apps">הכל</string>
     <string name="filter_per_app_language">שפה לפי אפליקציה</string>
+    <string name="developed_by">פותח על ידי Zhenxiang Chen</string>
     <string name="app_version">גרסה %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(שפה לפי אפליקציה לא נתמכת)</string>
     <string name="per_app_language_settings_unavailable">הגדרות שפה לפי אפליקציה אינן זמינות במכשיר זה</string>
@@ -18,4 +19,8 @@
     <string name="close">סגור</string>
     <string name="open_github">פתח מאגר GitHub</string>
     <string name="open_license">הצג רישיון</string>
+    <string name="license_title">רישיון</string>
+    <string name="license_empty">אין טקסט רישיון זמין.</string>
+    <string name="back">חזרה</string>
+    <string name="more_apps">עיין באפליקציות האחרות שלי</string>
 </resources>

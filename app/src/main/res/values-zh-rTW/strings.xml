@@ -9,6 +9,7 @@
     <string name="clear_search">清除搜尋</string>
     <string name="filter_all_apps">全部</string>
     <string name="filter_per_app_language">依應用程式語言</string>
+    <string name="developed_by">開發者：Zhenxiang Chen</string>
     <string name="app_version">版本 %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">（不支援依應用程式語言）</string>
     <string name="per_app_language_settings_unavailable">此裝置不支援依應用程式的語言設定</string>
@@ -18,4 +19,8 @@
     <string name="close">關閉</string>
     <string name="open_github">開啟 GitHub 儲存庫</string>
     <string name="open_license">檢視授權</string>
+    <string name="license_title">授權</string>
+    <string name="license_empty">沒有可用的授權文字。</string>
+    <string name="back">返回</string>
+    <string name="more_apps">查看我的其他應用程式</string>
 </resources>

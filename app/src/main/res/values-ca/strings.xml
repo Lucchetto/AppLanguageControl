@@ -9,6 +9,7 @@
     <string name="clear_search">Netejar cerca</string>
     <string name="filter_all_apps">Totes</string>
     <string name="filter_per_app_language">Per idioma de l\'app</string>
+    <string name="developed_by">Desenvolupat per Zhenxiang Chen</string>
     <string name="app_version">Versió %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(idioma per app no compatible)</string>
     <string name="per_app_language_settings_unavailable">La configuració d\'idioma per app no està disponible en aquest dispositiu</string>
@@ -18,4 +19,8 @@
     <string name="close">Tancar</string>
     <string name="open_github">Obre el repositori de GitHub</string>
     <string name="open_license">Mostra la llicència</string>
+    <string name="license_title">Llicència</string>
+    <string name="license_empty">No hi ha text de llicència disponible.</string>
+    <string name="back">Enrere</string>
+    <string name="more_apps">Descobreix les meves altres apps</string>
 </resources>

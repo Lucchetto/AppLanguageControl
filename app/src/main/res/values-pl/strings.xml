@@ -9,6 +9,7 @@
     <string name="clear_search">Wyczyść wyszukiwanie</string>
     <string name="filter_all_apps">Wszystkie</string>
     <string name="filter_per_app_language">Język dla aplikacji</string>
+    <string name="developed_by">Opracowane przez Zhenxiang Chen</string>
     <string name="app_version">Wersja %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(język dla aplikacji nie jest obsługiwany)</string>
     <string name="per_app_language_settings_unavailable">Ustawienia języka dla aplikacji nie są dostępne na tym urządzeniu</string>
@@ -18,4 +19,8 @@
     <string name="close">Zamknij</string>
     <string name="open_github">Otwórz repozytorium GitHub</string>
     <string name="open_license">Wyświetl licencję</string>
+    <string name="license_title">Licencja</string>
+    <string name="license_empty">Brak dostępnego tekstu licencji.</string>
+    <string name="back">Wstecz</string>
+    <string name="more_apps">Sprawdź moje inne aplikacje</string>
 </resources>

@@ -9,6 +9,7 @@
     <string name="clear_search">검색 지우기</string>
     <string name="filter_all_apps">전체</string>
     <string name="filter_per_app_language">앱별 언어</string>
+    <string name="developed_by">Zhenxiang Chen 개발</string>
     <string name="app_version">버전 %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(앱별 언어 미지원)</string>
     <string name="per_app_language_settings_unavailable">이 기기에서는 앱별 언어 설정을 사용할 수 없습니다</string>
@@ -18,4 +19,8 @@
     <string name="close">닫기</string>
     <string name="open_github">GitHub 저장소 열기</string>
     <string name="open_license">라이선스 보기</string>
+    <string name="license_title">라이선스</string>
+    <string name="license_empty">라이선스 텍스트를 사용할 수 없습니다.</string>
+    <string name="back">뒤로</string>
+    <string name="more_apps">내 다른 앱 살펴보기</string>
 </resources>

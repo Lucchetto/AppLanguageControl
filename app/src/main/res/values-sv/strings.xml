@@ -9,6 +9,7 @@
     <string name="clear_search">Rensa sökning</string>
     <string name="filter_all_apps">Alla</string>
     <string name="filter_per_app_language">Per app språk</string>
+    <string name="developed_by">Utvecklad av Zhenxiang Chen</string>
     <string name="app_version">Version %1$s (%2$d)</string>
     <string name="per_app_language_not_supported">(per app språk stöds inte)</string>
     <string name="per_app_language_settings_unavailable">Per app språkinställningar är inte tillgängliga på den här enheten</string>
@@ -18,4 +19,8 @@
     <string name="close">Stäng</string>
     <string name="open_github">Öppna GitHub-lagringsplats</string>
     <string name="open_license">Visa licens</string>
+    <string name="license_title">Licens</string>
+    <string name="license_empty">Ingen licens text tillgänglig.</string>
+    <string name="back">Tillbaka</string>
+    <string name="more_apps">Kolla in mina andra appar</string>
 </resources>
